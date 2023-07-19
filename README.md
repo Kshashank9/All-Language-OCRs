@@ -11,15 +11,7 @@ Model checkpoints are uploaded here
      3. Images collected from MLe2e and CVSI15:
           (CVSI15) http://www.ict.griffith.edu.au/cvsi2015/Dataset.php
           (MLe2e) https://paperswithcode.com/dataset/mle2e
-   Results:
-   Test on Kannada Dataset set:
-   | Dataset           | # samples | Accuracy | 1 - NED | Confidence | Label Length |
-   |:-----------------:|----------:|---------:|--------:|-----------:|-------------:|
-   | kannada_printed   |     13498 |    96.15 |   98.80 |      97.82 |         7.39 |
-   | kannada_realworld |       978 |    93.56 |   98.30 |      97.50 |         6.93 |
-   | kannada_konkani   |      1563 |    93.35 |   97.75 |      96.71 |         5.85 |
-   |-------------------|-----------|----------|---------|------------|--------------|
-   | Combined          |     16039 |    95.72 |   98.66 |      97.69 |         7.21 |
+   Results: Kannada_results.txt
 
 2. Assamese OCR:
    Coming up next!
