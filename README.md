@@ -2,7 +2,7 @@
 Model checkpoints are uploaded here
 
 1. **Kannada OCR**</br>
-   Kannada Model is based on PARSeq whcih performs well on both scene text and printed text data</br>
+   -Kannada Model is based on PARSeq whcih performs well on both scene text and printed text data</br>
    Trained on ~9 million synthetic images (SynthTiger + TRDG)</br>
    Validated on ~0.8 million synthetic images (SynthTiger + TRDG)</br></br>
    Results: Kannada_results.txt</br></br>
