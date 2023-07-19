@@ -9,8 +9,8 @@ Model checkpoints are uploaded here
      1. Kannada printed text page images: https://github.com/MILE-IISc/Kannada-OCR-test-images-with-ground-truth
      2. Konkani in Kannada script printed text images: https://github.com/MILE-IISc/KonkaniDocumentsInKannadaScript
      3. Images collected from MLe2e and CVSI15:
-          [CVSI15] ("http://www.ict.griffith.edu.au/cvsi2015/Dataset.php") </br>
-          [MLe2e] ("https://paperswithcode.com/dataset/mle2e") </br>
+          [CVSI15] (http://www.ict.griffith.edu.au/cvsi2015/Dataset.php) </br>
+          [MLe2e] (https://paperswithcode.com/dataset/mle2e) </br>
    Results: Kannada_results.txt
 
 2. Assamese OCR:
