@@ -6,7 +6,7 @@ Model checkpoints are uploaded here
    Trained on ~9 million synthetic images (SynthTiger + TRDG)</br>
    Validated on ~0.8 million synthetic images (SynthTiger + TRDG)</br>
    Results: Kannada_results.txt</br>
-   Tested on some real world datasets:</br>
+   Tested on some real world datasets:
      1. Kannada printed text page images: https://github.com/MILE-IISc/Kannada-OCR-test-images-with-ground-truth
      2. Konkani in Kannada script printed text images: https://github.com/MILE-IISc/KonkaniDocumentsInKannadaScript
      3. Images collected from MLe2e and CVSI15:</br>
