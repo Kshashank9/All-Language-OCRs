@@ -12,6 +12,7 @@ Model checkpoints are uploaded here
      3. Images collected from MLe2e and CVSI15:</br>
           [CVSI15](http://www.ict.griffith.edu.au/cvsi2015/Dataset.php) </br>
           [MLe2e](https://paperswithcode.com/dataset/mle2e) </br>
+          CVSI15 & MLe2e annotated dataset: https://csciitd-my.sharepoint.com/:f:/g/personal/aiy227509_iitd_ac_in/Eux1kRr2lHhAnakKoiVkxfcBBR7_fyUK7e3WEaK9S-oTEw?e=RwZ0Qi
 
 2. Assamese OCR:
    Coming up next!
