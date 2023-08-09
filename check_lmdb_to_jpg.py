@@ -5,7 +5,6 @@ import lmdb
 from strhub.data.utils import CharsetAdapter
 import unicodedata
 
-#charset = "ಀಁಂಃ಄ಅಆಇಈಉಊಋಌಎಏಐಒಓಔಕಖಗಘಙಚಛಜಝಞಟಠಡಢಣತಥದಧನಪಫಬಭಮಯರಱಲಳವಶಷಸಹ಼ಽಾಿೀುೂೃೄೆೇೈೊೋೌ್ೕೖೞೠೡೢೣ೦೧೨೩೪೫೬೭೮೯ೱೲ!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~0123456789"
 
 def check_label_charset(label, charset):
     for char in label:
@@ -48,25 +47,11 @@ def unpack_mdb(data_dir, output_dir):
                 print(label_key)
                 label = txn.get(label_key).decode()
 
-                # try:
-                #     label = txn.get(key).decode('utf-8')
-                # except UnicodeDecodeError:
-                #     try:
-                #         label = txn.get(key).decode('utf-16')
-                #     except UnicodeDecodeError:
-                #         try:
-                #             label = txn.get(key).decode('utf-16le')
-                #         except UnicodeDecodeError:
-                #             label = txn.get(key).decode('utf-8-sig')
-
                 label_path = os.path.join(output_dir, f'{image_name}.txt')
 
                 lbl = str(image_name) + ".jpg" + " " + str(label)
 
                 check = True
-                # label check if necessary
-                # if len(charset) != 0:
-                #     check = check_label_charset(str(label), charset)
 
                 if check == True:
 
@@ -77,18 +62,14 @@ def unpack_mdb(data_dir, output_dir):
                     cv2.imwrite(image_path, image)
                     f.write(lbl+"\n")
 
-        # with open('gt.txt', 'w+', encoding='utf-16') as f:
-        #     for i in len(labels_list):
-        #         f.write(labels_list[i]+"\n")
-
     env.close()
 
     print('Unpacking completed successfully.')
 
 
 # Set the path to the directory containing the .mdb files and the output directory
-data_dir = '/home/shashank_kv/scratch/parseq/tamil_data/test/tamil_iiith'
-output_dir = '/home/shashank_kv/scratch/parseq/Tamil/tamil_iiith_images'
+data_dir = '/path/to/mdb/files/'
+output_dir = '/path/to/store/decoded/images/'
 
 # Unpack the data and labels from the .mdb files
 unpack_mdb(data_dir, output_dir)
