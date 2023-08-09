@@ -4,23 +4,23 @@ from PIL import Image
 from strhub.data.module import SceneTextDataModule
 from strhub.models.utils import load_from_checkpoint
 
-def load(img, model_path):
-    print(model_path)
+def load(img, model_path, img_path):
+    print('Model Path: ', model_path)
+    print('Image Path: ', img_path)
     model = torch.load(model_path, map_location=torch.device('cpu'))
 
-    parseq = load_from_checkpoint(model_path).eval()
+    model = load_from_checkpoint(model_path).eval()
 
     img_transform = SceneTextDataModule.get_transform(parseq.hparams.img_size)
 
     img = img_transform(img).unsqueeze(0)
 
-    logits = parseq(img)
+    logits = model(img)
     logits.shape
 
     # Greedy decoding
     pred = logits.softmax(-1)
     label, confidence = parseq.tokenizer.decode(pred)
-    print('Decoded label = {}'.format(label[0]))
 
     return label[0]
 
@@ -35,5 +35,5 @@ if __name__ == "__main__":
 
     img = Image.open(img_path).convert('RGB')
 
-    text = load(img, model_path)
+    text = load(img, model_path, img_path)
     print(text)
