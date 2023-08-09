@@ -11,7 +11,7 @@ def load(img, model_path, img_path):
 
     model = load_from_checkpoint(model_path).eval()
 
-    img_transform = SceneTextDataModule.get_transform(parseq.hparams.img_size)
+    img_transform = SceneTextDataModule.get_transform(model.hparams.img_size)
 
     img = img_transform(img).unsqueeze(0)
 
@@ -20,7 +20,7 @@ def load(img, model_path, img_path):
 
     # Greedy decoding
     pred = logits.softmax(-1)
-    label, confidence = parseq.tokenizer.decode(pred)
+    label, confidence = model.tokenizer.decode(pred)
 
     return label[0]
 
