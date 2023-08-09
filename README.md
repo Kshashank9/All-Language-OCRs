@@ -8,4 +8,4 @@ All models currently support **Printed Text** datasets. run.py can be modified t
 2. **Tamil OCR**</br>
       
 # Convert mdb files to images
-check_lmdb_to_jpg.py file can be used to convert an mdb file to images. (Path to mdb folder consists of data.mdb and lock.mdb files)
+check_lmdb_to_jpg.py file can be used to convert mdb files to images. (Path to mdb folder consists of data.mdb and lock.mdb files)
