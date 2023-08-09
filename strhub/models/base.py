@@ -119,13 +119,9 @@ class BaseSystem(pl.LightningModule, ABC):
         probs = logits.softmax(-1)
         preds, probs = self.tokenizer.decode(probs)
 
-        ###########################################
-        #Added by me to check normalisation
         import unicodedata
         def normalize_text(text):
             return unicodedata.normalize('NFC', text)
-        image_count = count_var
-        # # # numbers = []
 
         def copy_image(source_folder, destination_folder, filename):
             source_path = f"{source_folder}/{filename}.jpg"
@@ -134,20 +130,6 @@ class BaseSystem(pl.LightningModule, ABC):
             shutil.copyfile(source_path, destination_path)
             print(f"File {filename}.jpg copied successfully!")
 
-        source_folder = "/home/shashank_kv/scratch/parseq/Kannada/kannada_realworld_images/images"
-        destination_folder = "/home/shashank_kv/scratch/parseq/Kannada/kannada_realworld_wronglypredicted_v3"
-        wordfile = "/home/shashank_kv/scratch/parseq/Kannada/kannada_tesseract.txt"
-
-        # import os
-        # folder_path = "/home/shashank_kv/scratch/parseq/Assamese/assamese_iiith_images/"
-        # for filename in os.listdir(folder_path):
-        #     # Check if the file has the .jpg extension
-        #     if filename.endswith('.jpg'):
-        #         # Extract the number from the filename
-        #         n = filename.split('.')
-        #         numbers.append(int(n[0]))
-        # numbers.sort()
-        ###########################################
 
         for pred, prob, gt in zip(preds, probs, labels):
             confidence += prob.prod().item()
@@ -159,43 +141,16 @@ class BaseSystem(pl.LightningModule, ABC):
                 correct += 1
                 var = True
 
-        #     ###########################################
             normalized_pred = normalize_text(pred)
             normalized_gt = normalize_text(gt)
 
             if pred != gt and normalized_pred == normalized_gt:
                 correct += 1
                 var = True
-            
-            # if pred != gt and normalized_pred != normalized_gt and ((chr(0x964)) in normalized_gt):
-            #     correct+=1
-            #     var=True
-
-            # if pred!=gt and normalized_pred!=normalized_gt: #and not ((chr(0x964)) in normalized_gt):
-            #     print('Pred: ', normalized_pred, '\tGt: ', normalized_gt, '\tMatched: ', var, '\timageID: ', image_count)
-            #     print('Lenght of pred: ', len(normalized_pred),'\tLenght of gt: ', len(normalized_gt))
-            #     p = list(normalized_pred)
-            #     g = list(normalized_gt)
-            #     print('List of pred: ', p)
-            #     print('List of gt: ', g)
-            #     print()
-
-            #     with open(wordfile, "a") as file:
-            #         file.write(normalized_gt + "\n")
-
-                # filename = str(image_count)
-                # copy_image(source_folder, destination_folder, filename)
-
-            ###########################################
-
-            with open(wordfile, 'a+') as f:
-                f.write(pred+'\n')
 
             total += 1
             label_length += len(pred)
 
-            #increment count
-            image_count += 1
 
         return dict(output=BatchResult(total, correct, ned, confidence, label_length, loss, loss_numel))
 

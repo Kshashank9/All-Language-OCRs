@@ -27,9 +27,6 @@ from torch import Tensor
 from pytorch_lightning.utilities.types import STEP_OUTPUT
 from timm.models.helpers import named_apply
 
-#import sys
-#previous_path = sys.path[0]
-#sys.path.append('/home/shashank_kv/scratch/parseq')
 
 from strhub.models.base import CrossEntropySystem
 
