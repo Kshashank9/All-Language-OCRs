@@ -26,7 +26,7 @@ def load(img, model_path, img_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process image using the desired model")
-    parser.add_argument("--model_path", required=True, help="Path to the Parseq model checkpoint")
+    parser.add_argument("--model_path", required=True, help="Path to the model checkpoint")
     parser.add_argument("--image_path", required=True, help="Path to the input image")
     args = parser.parse_args()
 
