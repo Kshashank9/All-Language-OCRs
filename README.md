@@ -3,7 +3,7 @@ Model checkpoints are uploaded [here](https://csciitd-my.sharepoint.com/:f:/g/pe
 
 All models currently support **Printed Text** datasets. run.py can be modified to execute on multiple images.
 
-Models that are currently available:
+# Models that are currently available:
 1. **Kannada OCR**</br>
 2. **Tamil OCR**</br>
       
