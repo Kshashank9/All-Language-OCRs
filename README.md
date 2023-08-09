@@ -7,7 +7,7 @@ Model checkpoints are uploaded [here](https://csciitd-my.sharepoint.com/:f:/g/pe
    Validated on ~0.8 million synthetic images (SynthTiger + TRDG)</br></br>
    Results: Kannada_results.txt</br></br>
    Tested on some real world datasets:
-     1.  <!--- [Kannada printed text page images](https://github.com/MILE-IISc/Kannada-OCR-test-images-with-ground-truth) ---> 
+     1. [Kannada printed text page images](https://github.com/MILE-IISc/Kannada-OCR-test-images-with-ground-truth)
      2. [Konkani in Kannada script printed text images](https://github.com/MILE-IISc/KonkaniDocumentsInKannadaScript)
      3. Images collected from MLe2e and CVSI15:</br>
           [CVSI15](http://www.ict.griffith.edu.au/cvsi2015/Dataset.php) </br>
