@@ -14,6 +14,7 @@ All models currently support **Printed Text** datasets. run.py can be modified t
 check_lmdb_to_jpg.py file can be used to convert mdb files to images. (Path to mdb folder consists of data.mdb and lock.mdb files)
 
 ## Test the model
+Python version 3.9.0 is recommended
 ```
 python run.py --model_path /path/to/model.ckpt --image_path /path/to/image.jpg
 ```
