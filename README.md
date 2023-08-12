@@ -4,11 +4,13 @@ Model checkpoints can be downloaded from [here](https://csciitd-my.sharepoint.co
 All models uploaded currently support **Printed Text** datasets. run.py can be modified to execute on multiple instances.
 
 ## Models that are currently available:
-1. **Kannada OCR**</br>
-2. **Tamil OCR**</br>
-3. **Hindi OCR** (Code has some issues with Hindi model, will be updated soon)</br>
-4. **Assamese OCR**</br>
-5. **Urdu OCR** (For Urdu we have a seperate GitHub repo: [UTRNet](https://github.com/abdur75648/UTRNet-High-Resolution-Urdu-Text-Recognition))</br>
+1. **English OCR**
+2. **Kannada OCR**</br>
+3. **Tamil OCR**</br>
+4. **Hindi OCR**</br>
+5. **Assamese OCR**</br>
+6. **Urdu OCR** (For Urdu we have a seperate GitHub repo: [UTRNet](https://github.com/abdur75648/UTRNet-High-Resolution-Urdu-Text-Recognition))</br>
+
 
       
 ## Convert mdb files to images
